@@ -81,6 +81,17 @@ h1,h2,h3,h4,h5,h6{
     background-color: var(--main-color);
 }
 
+/* Bg Animation */
+.bg-animation-effect{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    z-index: -1;
+
+}
 
 /* ----------------
 About Section 
@@ -97,6 +108,7 @@ About Section
     margin: auto;
     text-align: center;
     
+    
 }
 .about-content img{
     max-width: 200px;
@@ -104,10 +116,14 @@ About Section
     border-radius: 50%;
     margin: 0 0 15px ;
 }
+.about-content p{
+    font-size: 20px;
+    font-weight: 300;
+}
 
 .about-content h1{
     font-size: 28px;
-    margin: 0 0 8px;
+    margin: 0 0 10px;
 
 }
 
@@ -125,7 +141,34 @@ About Section
     content: '';
     position: absolute;
     left: 0;
-    top: 0;
+    bottom: 0;
     height: 1px;
+    width: 0%;
+    background-color: var(--main-color);
+    transition: width 0.3s ease;
     
+}
+.about-content p a:hover::before{
+    width: 100%;
+}
+
+.about-content h2{
+    margin: 20px 0 5px;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.about-content .skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-content .skill-item{
+    background-color: var(--dark-light);
+    margin: 4px 2px 0 ;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    text-transform: capitalize;
 }
