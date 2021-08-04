@@ -16,7 +16,7 @@
     <!-- Bg Animation Effect End -->
 
     <!-- About section START -->
-    <section class="about-section">
+    <section class="about-section hidden">
         <div class="container">
             <div class="row min-vh-100">
                 <div class="about-content">
@@ -46,7 +46,17 @@
     <section class="portfolio-section sec-padding">
         <div class="container">
             <div class="row">
-                
+                <div class="section-title">
+                    <h2>Recent Works</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="portfolio-filter">
+                    <button type="button" title="Show All" class="portfolio-filter-btn" data-filter="all">all</button>
+                    <button type="button" title="Filter by Front-end" class="portfolio-filter-btn active" data-filter="front-end">front-end</button>
+                    <button type="button" title="Filter by Back-end" class="portfolio-filter-btn" data-filter="back-end">back-end</button>
+                    <button type="button" title="Filter by Bootstrap" class="portfolio-filter-btn" data-filter="bootstrap">bootstrap</button>
+                </div>
             </div>
         </div>
     </section>
