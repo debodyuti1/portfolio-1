@@ -416,8 +416,8 @@ Portfolio Section
     top: 0;
     height: 100%;
     width: 100%;
-
     z-index: 200;
+    visibility: hidden;
 }
 .portfolio-popup::before,
 .portfolio-popup::after{
@@ -478,10 +478,41 @@ Portfolio Section
     font-size: 28px;
     text-transform: capitalize;
 }
-.pp-
+.pp-body{
+    padding: 15px 0;
+}
+.pp-body .description{
+    margin: 0 0 30px;
+}
+.pp-body .general-info p{
+    margin-bottom:10px;
+    font-weight: 600;
+}
+.pp-body .general-info span{
+    font-weight: 300;
+    margin-left: 5px;
+}
+.pp-body .general-info p a{
+    color: var(--main-color);
+    
+}
 .pp-footer{
     padding-top: 40px 0 0;
+    display: flex;
 }
+.pp-footer-left,
+.pp-footer-right{
+    flex: 1;
+}
+.pp-footer-right{
+    text-align: right;
+}
+.pp-footer h3{
+    text-transform: capitalize;
+    font-size: 20px;
+    margin: 30px 0 15px;
+}
+
 .pp-footer img{
     max-width: 120px;
 }
