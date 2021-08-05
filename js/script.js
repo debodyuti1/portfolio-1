@@ -10,3 +10,17 @@ function bgAnimationItems(){
     }
 }
 bgAnimationItems();
+
+// Filter Portfolio Items -----------------
+function filterItems(filterBtn){
+    const selectedCatagory = filterBtn.getAttribute ("data-filter");
+    document.querySelectorAll(".portfolio-item").forEach((item) =>{
+        const catagory =item.getAttribute("data-catagory").split(",");
+
+    });
+
+}
+
+// Filter active catagory portfoliol Items
+filterItems(document.querySelector(".portfolio-filter-btn.active"));
+

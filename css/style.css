@@ -39,7 +39,7 @@ body{
     background-color: var(--dark);
     -webkit-tap-highlight-color: transparent;
     overflow-x: hidden;
-    overflow-y: hidden;
+    
 
 }
 
@@ -388,6 +388,7 @@ Portfolio Section
     width: calc((100% / 3) - 30px) ;
     margin: 0 15px 30px;
     cursor: pointer;
+    display: none;
 }
 
 .portfolio-item:hover .portfolio-item-thumbnail .btn{
