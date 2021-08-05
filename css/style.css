@@ -451,3 +451,37 @@ Portfolio Section
     max-width: 850px;
     margin: 50px auto 60px;
 }
+.pp-header{
+    position: relative;
+}
+.pp-header h2{
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+    padding-right: 50px;
+}
+
+.pp-header h2 span{
+    font-weight: 300;
+}
+
+.pp-close-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.pp-thumbnail{
+    padding: 20px 0;
+}
+.pp-header h3{
+    font-size: 28px;
+    text-transform: capitalize;
+}
+.pp-
+.pp-footer{
+    padding-top: 40px 0 0;
+}
+.pp-footer img{
+    max-width: 120px;
+}
