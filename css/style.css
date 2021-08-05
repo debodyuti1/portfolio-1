@@ -391,6 +391,10 @@ Portfolio Section
     display: none;
 }
 
+.portfolio-item.show{
+    display: block;
+}
+
 .portfolio-item:hover .portfolio-item-thumbnail .btn{
     transition-delay: 0.2s;
     opacity: 1;

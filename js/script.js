@@ -12,11 +12,25 @@ function bgAnimationItems(){
 bgAnimationItems();
 
 // Filter Portfolio Items -----------------
+const filterBtnsContainer = document.querySelector(".portfolio-filter");
+filterBtnsContainer.addEventListener("click", (e) =>{
+    if(e.target.classList.contains("portfolio-filter-btn") && !e.target.classList.contains("active")){
+        filterBtnsContainer.querySelector(".active").classList.remove("active");
+        e.target.classList.add("active");
+        filterItems(e.target);
+    }
+});
+
 function filterItems(filterBtn){
     const selectedCatagory = filterBtn.getAttribute ("data-filter");
     document.querySelectorAll(".portfolio-item").forEach((item) =>{
         const catagory =item.getAttribute("data-catagory").split(",");
-
+        if(catagory.indexOf(selectedCatagory) !== -1 || selectedCatagory === "all"){
+            item.classList.add("show");
+        }
+        else{
+            item.classList.remove("show");
+        }
     });
 
 }
