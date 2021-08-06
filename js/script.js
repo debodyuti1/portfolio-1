@@ -71,6 +71,7 @@ document.addEventListener("click", (e) =>{
         const currentItem = e.target.closest(".portfolio-item");
         portfolioItemIndex = Array.from(PortfolioItems).indexOf(currentItem);
         togglePopup();
+        portfolioItemDetails();
     }
 });
 
@@ -79,3 +80,8 @@ function togglePopup(){
     toggleBodyScrolling();
 }
 document.querySelector(".pp-close-btn").addEventListener("click",togglePopup);
+
+function portfolioItemDetails(){
+    document.querySelector(".pp-thumbnail img").src = 
+    PortfolioItems[portfolioItemIndex].querySelector("img").src;
+};
