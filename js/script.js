@@ -82,6 +82,20 @@ function togglePopup(){
 document.querySelector(".pp-close-btn").addEventListener("click",togglePopup);
 
 function portfolioItemDetails(){
+
+    // Getting thumbnail from same src
     document.querySelector(".pp-thumbnail img").src = 
     PortfolioItems[portfolioItemIndex].querySelector("img").src;
+
+    // Getting heading of project details
+    document.querySelector(".pp-header h3").innerHTML = 
+    PortfolioItems[portfolioItemIndex].querySelector(".portfolio-item-title").innerHTML;
+
+    // Getting body details
+    document.querySelector(".pp-body").innerHTML = 
+    PortfolioItems[portfolioItemIndex].querySelector(".portfolio-item-details").innerHTML;
+
+
+    // Numbering js for heading ex. 1 of 5
+    document.querySelector(".pp-counter").innerHTML = `${portfolioItemIndex+1} of ${PortfolioItems.length-1} (<span title = "catagory">${document.querySelector(".portfolio-filter-btn.active").innerHTML}</span>)`;
 };
