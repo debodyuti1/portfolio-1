@@ -14,14 +14,21 @@ bgAnimationItems();
 // Filter Portfolio Items -----------------
 const filterBtnsContainer = document.querySelector(".portfolio-filter");
 filterBtnsContainer.addEventListener("click", (e) =>{
+    
     if(e.target.classList.contains("portfolio-filter-btn") && !e.target.classList.contains("active")){
+        
         filterBtnsContainer.querySelector(".active").classList.remove("active");
+
         e.target.classList.add("active");
+
         document.querySelector(".filter-status").classList.add("active");
-        document.querySelector(".filter-status p").innerHTML = 'filtering <span>${e.target.innerHTML}</span> works';
+        
+        document.querySelector(".filter-status p").innerHTML = `filtering <span>${e.target.innerHTML}</span> works`;
+
         setTimeout(() =>{
             filterItems(e.target);
         },400);
+        
         setTimeout(() =>{
             document.querySelector(".filter-status").classList.remove("active");
         },800);
