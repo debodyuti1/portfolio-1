@@ -72,6 +72,7 @@ document.addEventListener("click", (e) =>{
         portfolioItemIndex = Array.from(PortfolioItems).indexOf(currentItem);
         togglePopup();
         portfolioItemDetails();
+        updateNextPrevItem();
     }
 });
 
@@ -97,5 +98,63 @@ function portfolioItemDetails(){
 
 
     // Numbering js for heading ex. 1 of 5
-    document.querySelector(".pp-counter").innerHTML = `${portfolioItemIndex+1} of ${PortfolioItems.length-1} (<span title = "catagory">${document.querySelector(".portfolio-filter-btn.active").innerHTML}</span>)`;
+    document.querySelector(".pp-counter").innerHTML = `${portfolioItemIndex+1} of ${PortfolioItems.length} (<span title = "catagory">${document.querySelector(".portfolio-filter-btn.active").innerHTML}</span>)`;
 };
+
+function updateNextPrevItem(){
+    if(portfolioItemIndex !== 0){
+        document.querySelector(".pp-footer-left").classList.remove("hidden");
+
+        document.querySelector(".pp-footer-left h3").innerHTML = PortfolioItems[portfolioItemIndex-1].querySelector("h3").innerHTML;
+
+        document.querySelector(".pp-footer-left img").src = PortfolioItems[portfolioItemIndex-1].querySelector("img").src;
+    }
+    else{
+        document.querySelector(".pp-footer-left").classList.add("hidden");
+    }
+
+    if(portfolioItemIndex !== PortfolioItems.length-1){
+       
+        document.querySelector(".pp-footer-right").classList.remove("hidden");
+
+        document.querySelector(".pp-footer-right h3").innerHTML = PortfolioItems[portfolioItemIndex+1].querySelector("h3").innerHTML;
+
+        document.querySelector(".pp-footer-right img").src = PortfolioItems[portfolioItemIndex+1].querySelector("img").src;
+
+    }
+    else{
+        document.querySelector(".pp-footer-right").classList.add("hidden");
+
+    }
+}
+
+document.querySelector(".pp-prev-btn").addEventListener("click", () => {
+    changePortfolioItem("prev");
+});
+
+document.querySelector(".pp-next-btn").addEventListener("click", () => {
+    changePortfolioItem("next");
+});
+
+function changePortfolioItem(direction){
+    if(direction == "prev"){
+        portfolioItemIndex--;
+    }
+    else{
+        portfolioItemIndex++;
+    }
+
+    document.querySelector(".pp-overlay").classList.add(direction);
+    setTimeout(() => {
+
+        document.querySelector(".pp-inner").scrollTo(0,0);
+        portfolioItemDetails();
+        updateNextPrevItem();
+
+    },400);
+
+    setTimeout(() => {
+        document.querySelector(".pp-overlay").classList.remove(direction);
+    });
+    
+}
