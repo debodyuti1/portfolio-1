@@ -155,6 +155,6 @@ function changePortfolioItem(direction){
 
     setTimeout(() => {
         document.querySelector(".pp-overlay").classList.remove(direction);
-    });
+    },1000);
     
 }
