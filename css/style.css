@@ -79,6 +79,9 @@ h1,h2,h3,h4,h5,h6{
 .sec-padding{
     padding: 100px 0;
 }
+.flex-end{
+    justify-content: flex-end;
+}
 
 /* --------------
    Buttons 
@@ -235,6 +238,64 @@ Bg Animation
         transform: translateY(-12.5vh);
     }
 }  
+
+/* --------------
+Header
+--------------- */
+.header{
+    padding: 25px 0 0;;
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.header .nav-toggler{
+    height: 34px;
+    width: 44px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 101;
+
+}
+.header .nav-toggler span{
+    height: 2px;
+    width: 30px;
+    background-color: var(--white);
+    display: inline-block;
+    position: relative;
+}
+
+.header .nav-toggler span::before,
+.header .nav-toggler span::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 2px;
+    width: 50%;
+    background-color: var(--white);
+    transition: all 0.3s ease;
+    
+}
+.header .nav-toggler span::before{
+    left: 0;
+    transform: translateY(-8px);
+}
+.header .nav-toggler span::after{
+    right: 0;
+    transform: translateY(8px);
+}
+
+.header .nav-toggler:hover span::before,
+.header .nav-toggler:hover span::after{
+    width: 100%;
+}
+
 
 /* ----------------
 About Section 
