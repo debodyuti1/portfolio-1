@@ -645,8 +645,9 @@ Portfolio Section
 
 /* Contact Section */
 
-.contact-section.active{
+.contact-section{
     display: flex;
+    text-align: center;
 }
 
 
@@ -661,7 +662,9 @@ Portfolio Section
     margin-bottom: 30px;
 
 }
-
+.contact-info-item{
+    margin: 6px 0;
+}
 .contact-info-item p{
     font-size: 24px;
     font-weight: 600;
@@ -682,6 +685,7 @@ margin-right: 4px;
     color: var(--white-light);
     border-radius: 50%;
     transition: all 0.3s ease;
+    margin: 0 3px;
 }
 .contact-info-item .social-links a:hover{
     color: var(--main-color);
