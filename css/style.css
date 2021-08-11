@@ -239,6 +239,29 @@ Bg Animation
     }
 }  
 
+/* -----------------
+Overlay Effect
+------------------- */
+.overlay-effect{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    background-color: red;
+    backdrop-filter: blur(60px);
+    opacity: 50%;
+    
+    
+    
+}
+.overlay-effect-item{
+    height: 10vh;
+    /* background-color: var(--dark-light); */
+}
+
+
 /* --------------
 Header
 --------------- */
@@ -294,6 +317,17 @@ Header
 .header .nav-toggler:hover span::before,
 .header .nav-toggler:hover span::after{
     width: 100%;
+}
+
+.header .nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    padding: 0 15px;
+    overflow-y: auto;
 }
 
 
