@@ -19,7 +19,9 @@ navToggler.addEventListener("click",toggleNavbar);
 
 function toggleNavbar(){
     navToggler.classList.toggle("active");
+    document.querySelector(".nav").classList.toggle("open");
     toggleOverlayEffect();
+    toggleBodyScrolling();
     
 }
 
