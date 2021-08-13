@@ -19,6 +19,14 @@ navToggler.addEventListener("click",toggleNavbar);
 
 function toggleNavbar(){
     navToggler.classList.toggle("active");
+    toggleOverlayEffect();
+    
+}
+
+// Toggle Overlay Effect -----------------
+
+function toggleOverlayEffect(){
+    document.querySelector(".overlay-effect").classList.toggle("active");
 }
 
 //Toggle Body scrolling -------------------
