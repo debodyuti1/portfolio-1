@@ -25,6 +25,34 @@ function toggleNavbar(){
     
 }
 
+// Hide and Show section ----------------
+document.addEventListener("click", (e) => {
+    if(e.target.classList.contains("link-item") && e.target.hash !== ""){
+        const hash = e.target.hash;
+        if(e.target.classList.contains("nav-item")){
+            activeSection(hash);
+            toggleNavbar();
+        }
+        else{
+            toggleBodyScrolling();
+            toggleOverlayEffect();
+            document.querySelector(".nav-toggler").classList.add("toggle-hide");
+            setTimeout(() => {
+                activeSection(hash);
+                toggleOverlayEffect();
+                toggleBodyScrolling();
+                document.querySelector(".nav-toggler").classList.remove("toggle-hide");
+            }, 950);
+        }
+    }
+});
+
+function activeSection(sectionId){
+    document.querySelector("section.active").classList.remove("active");
+    document.querySelector(sectionId).classList.add("active");
+    window.scrollTo(0,0);
+}
+
 // Toggle Overlay Effect -----------------
 
 function toggleOverlayEffect(){

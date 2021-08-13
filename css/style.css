@@ -93,6 +93,7 @@ section.active{
 }
 
 
+
 /* --------------
    Buttons 
 -----------------*/
@@ -333,9 +334,15 @@ Header
     position: relative;
     z-index: 101;
     margin-right: 15px;
-
-
+    transition: all 0.3s ease 0.4s;
 }
+
+.header .nav-toggler.toggle-hide{
+    transform: scale(0);
+    pointer-events: none;
+    transition-delay: 0s;
+}
+
 .header .nav-toggler span{
     height: 2px;
     width: 30px;
@@ -875,10 +882,9 @@ Portfolio Section
 
 /* Contact Section */
 
-.contact-section{
-    display: flex;
-    
-}
+/* .contact-section{
+    display: flex; 
+} */
 
 
 .contact-content{
@@ -886,6 +892,7 @@ Portfolio Section
     width: 100%;
     margin: auto;
     text-align: center;
+    justify-content: center;
 }
 
 .contact-text{
