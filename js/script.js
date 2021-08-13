@@ -11,6 +11,16 @@ function bgAnimationItems(){
 }
 bgAnimationItems();
 
+
+// Toggle Navbar ---------------------------
+
+const navToggler = document.querySelector(".nav-toggler");
+navToggler.addEventListener("click",toggleNavbar);
+
+function toggleNavbar(){
+    navToggler.classList.toggle("active");
+}
+
 //Toggle Body scrolling -------------------
 function toggleBodyScrolling(){
     document.body.classList.toggle("hide-scrolling");
