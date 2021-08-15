@@ -4,3 +4,9 @@
 </p>
 
 <img src = "https://github.com/debodyuti1/portfolio-1/blob/main/img/about.png"   alt="Website overview">
+<<<<<<< HEAD
+=======
+
+
+	
+>>>>>>> 7325601d9792a02f5670e2510ea5837d1be50e51
