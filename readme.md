@@ -6,6 +6,7 @@
 <img src = "https://github.com/debodyuti1/portfolio-1/blob/main/img/about.png"   alt="Website overview">
 
 ## Built With :
-	-HTML
-	-CSS
-	-Javascript
+	<h5>-HTML</h5><br>
+	<h5>-CSS</h5><br>
+	<h5>-CSS</h5>
+	
