@@ -311,6 +311,9 @@ Overlay Effect
     transition-delay: 0.40s;
 }
 
+
+
+
 /* --------------
 Header
 --------------- */
@@ -512,10 +515,12 @@ About Section
     text-transform: capitalize ;
 }
 .about-content p a{
+    font-size: 23px;
     color: var(--main-color);
     text-transform: capitalize;
     font-weight: 600;
     position:relative;
+    
 }
 .about-content p a::before{
     content: '';
@@ -527,9 +532,11 @@ About Section
     background-color: var(--main-color);
     transition: width 0.3s ease;
     
+    
 }
 .about-content p a:hover::before{
     width: 100%;
+    
 }
 
 .about-content h2{
@@ -893,6 +900,7 @@ Portfolio Section
     margin: auto;
     text-align: center;
     justify-content: center;
+    padding: 0 15px;
 }
 
 .contact-text{
@@ -1014,4 +1022,48 @@ margin-right: 4px;
     height: 120px;
     padding-top: 15px;
     resize: none;
+}
+
+/* Responsive */
+
+@media(max-width:991px){
+    .bg-animation-effect .col-20,
+    .bg-animation-effect .col-5,
+    .bg-animation-effect .col-6{
+        display: none;
+    }
+
+    .bg-animation-effect div{
+        margin-left: calc((100% - 28px) / 8);
+    }
+    .portfolio-item{
+        width: calc(50% - 30px);
+    }
+}
+@media(max-width:767px){
+    
+    .bg-animation-effect .col-8,
+    .bg-animation-effect .col-7{
+        display: none;
+    }
+    .bg-animation-effect div{
+        margin-left: calc((100% - 20px) / 6);
+    }
+    .portfolio-item{
+        width: calc(100% - 30px);
+    }
+}
+@media(max-width:575px){
+    .pp-footer h3{
+        font-size: 16px;
+    }
+    .contact-info-item p{
+        font-size: 18px;
+    }
+
+    .contact-info-item span{
+        display: block;
+        margin-bottom: 10px;
+    }
+
 }
